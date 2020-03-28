@@ -65,9 +65,15 @@
         </style>
     </head>
     <body>
+        @include('partials.alerts')
+        {{-- {{Auth::logout()}} --}}
+
         @include('partials.navbar')
+        @if (session('mustVerifyEmail'))
+    <div class="alert alert-danger text-center">You must verify your email! Please verify your email to use all the features of the site</div>
+@endif
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
+            {{-- @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
@@ -79,7 +85,7 @@
                         @endif
                     @endauth
                 </div>
-            @endif
+            @endif --}}
             <div class="flex-center position-ref full-height">
                 <div class="content">
                     <div class="title m-b-md">
@@ -87,7 +93,9 @@
                     </div>
                 </div>
             </div>
-			</div>
+            </div>
+            <script src="{{asset('js/bootstrap.min.js')}}"></script>
+<script src="{{asset('js/app.js')}}"></script>
     </body>
 </html>
 

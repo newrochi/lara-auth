@@ -11,7 +11,7 @@
                 User Registration
             </div>
             <div class="card-body">
-                <form action="" method="post">
+                <form action="{{route('auth.register')}}" method="post">
                     @csrf
                         <div class="row form-group">
                             <label for="email" class="col-sm-3 col-form-label">Email</label>

@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <form action="" method="post">
+            <form action="{{route('auth.login')}}" method="post">
                     @csrf
                         <div class="row form-group">
                             <label for="email" class="col-sm-3 col-form-label">Email</label>
@@ -34,7 +34,7 @@
                         <div class="row form-group">
                             <div class="form-check offset-sm-3">
                                 <input type="checkbox" class="form-check-input" name="remember" id="remember">
-                                <label for="remember" class="form-check-label"><small>Remember Me</small></label>
+                                <label for="remember" class="form-check-label"><small>Remember Me!</small></label>
                             </div>
                         </div>
                         <div class="form-check">
